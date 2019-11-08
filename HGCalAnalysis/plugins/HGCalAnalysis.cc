@@ -502,7 +502,7 @@ HGCalAnalysis::HGCalAnalysis(const edm::ParameterSet &iConfig)
     algo_ = 3;
   }
   clusters_ = consumes<reco::CaloClusterCollection>(edm::InputTag("hgcalLayerClusters"));
-  simClusters_ = consumes<std::vector<SimCluster>>(edm::InputTag("mix", "MergedCaloTruth"));
+  simClusters_ = consumes<std::vector<SimCluster>>(edm::InputTag("HGCTruthProducer"));
   hev_ = consumes<edm::HepMCProduct>(edm::InputTag("generatorSmeared"));
 
   simTracks_ = consumes<std::vector<SimTrack>>(edm::InputTag("g4SimHits"));
